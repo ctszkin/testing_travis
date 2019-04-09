@@ -14,11 +14,11 @@ before_install:
 install:
     - conda create --yes -n test_travis python=$TRAVIS_PYTHON_VERSION
     - source activate test_travis
-    - conda install --yes pytest
+    - conda install --yes pytest pytest-cov
 
 script:
     - python hello.py
-    - pytest Tests/
+    - pytest --cov=./
 
 after_success:
     - curl -s https://codecov.io/bash | bash
