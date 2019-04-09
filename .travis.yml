@@ -19,3 +19,6 @@ install:
 script:
     - python hello.py
     - pytest Tests/
+
+after_success:
+    - codecov
