@@ -7,6 +7,11 @@ def test_1():
 
 
 def test_hello(capsys):
-    hello()
+    hello(1)
     captured = capsys.readouterr()
     assert captured.out == "Hello World!\n"
+
+def test_hello2(capsys):
+    hello(0)
+    captured = capsys.readouterr()
+    assert captured.out == "a\n"
