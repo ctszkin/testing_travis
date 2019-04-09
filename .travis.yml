@@ -17,7 +17,6 @@ install:
     - conda install --yes pytest pytest-cov
 
 script:
-    - python hello.py
     - python -m pytest --cov=./
 
 after_success:
