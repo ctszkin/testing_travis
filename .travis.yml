@@ -15,10 +15,11 @@ install:
     - conda create --yes -n test_travis python=$TRAVIS_PYTHON_VERSION
     - source activate test_travis
     - conda install --yes pytest
+    - conda install --yes codecov
 
 script:
     - python hello.py
     - pytest Tests/
 
 after_success:
-    - codecov
+    - curl -s https://codecov.io/bash | bash
