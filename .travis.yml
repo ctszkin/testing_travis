@@ -12,7 +12,7 @@ before_install:
 
 install:
     # - conda env create -f environment.yml
-    - conda env create -n test_travis 
+    - conda create --yes -n test_travis python=$TRAVIS_PYTHON_VERSION
     - source activate test_travis
     - conda install --yes pytest pytest-cov pandas numpy tensorflow scikit-learn keras
 
