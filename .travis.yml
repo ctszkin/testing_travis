@@ -1,8 +1,5 @@
 language: python
 
-python:
-    - "3.6"
-
 
 before_install:
     - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
@@ -12,7 +9,7 @@ before_install:
     - conda update --yes conda
 
 install:
-    - conda create --yes -n test_travis python=$TRAVIS_PYTHON_VERSION
+    - conda env create -f environment.yml --yes -n test_travis
     - source activate test_travis
     - conda install --yes pytest pytest-cov
 
