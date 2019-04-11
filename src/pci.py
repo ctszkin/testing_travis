@@ -89,6 +89,8 @@ def setup_pci(seed, n):
     return X_train, Y_train, X_val, Y_val
 
 def run_PCI(X_train, Y_train, X_val, Y_val):
+    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
     output = np.zeros((9,4))
 
     for i in range(0,9):
