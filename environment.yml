@@ -1,4 +1,4 @@
-name: tf18
+name: test_travis
 channels:
   - anaconda
   - plotly
