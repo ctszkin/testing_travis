@@ -3,6 +3,11 @@ language: python
 python:
     - 3.6
 
+matrix:
+    include:
+        - python: 3.6
+          env: KERAS_BACKEND=tensorflow
+
 before_install:
     - wget http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
     - chmod +x miniconda.sh
