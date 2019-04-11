@@ -20,7 +20,7 @@ install:
     - conda create --yes -n test_travis python=$TRAVIS_PYTHON_VERSION
     - source activate test_travis
     - conda install --yes -q pytest pytest-cov pandas numpy scikit-learn keras matplotlib
-    - conda install -y -q tensorflow=1.13
+    - conda install -y -q tensorflow=1.8.0
 
 script:
     - python -m pytest --cov=./
