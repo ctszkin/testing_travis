@@ -9,7 +9,7 @@ before_install:
     - conda update --yes conda
 
 install:
-    - conda env create -f environment.yml --yes
+    - conda env create -f environment.yml
     - source activate test_travis
     - conda install --yes pytest pytest-cov
 
