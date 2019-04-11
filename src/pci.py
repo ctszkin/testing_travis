@@ -126,3 +126,9 @@ def gen_figure(df):
     fig3.set_ylabel("PCI")
     print(fig3)
     fig3.get_figure().savefig("fig3.png")
+
+
+if __name__ == "__main__":
+    X_train, Y_train, X_val, Y_val = setup_pci(seed=1, n=500)
+    df = run_PCI(X_train, Y_train, X_val, Y_val)
+    gen_figure(df)
